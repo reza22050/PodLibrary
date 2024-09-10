@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Dto\**" />
+    <Compile Remove="Token\**" />
+    <EmbeddedResource Remove="Dto\**" />
+    <EmbeddedResource Remove="Token\**" />
+    <None Remove="Dto\**" />
+    <None Remove="Token\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="PodService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RestSharp" Version="112.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PodLibrary\PodLibrary.csproj" />
+  </ItemGroup>
+
+</Project>
